@@ -46,6 +46,8 @@ public:
     QLabel *labelImmatureText;
     QLabel *labelImmature;
     QSpacerItem *verticalSpacer;
+    QLabel *label_wallet_bgcoin;
+    QLabel *label_6;
     QVBoxLayout *verticalLayout_3;
     QFrame *frame_2;
     QVBoxLayout *verticalLayout;
@@ -115,7 +117,7 @@ public:
         font1.setWeight(75);
         labelBalance->setFont(font1);
         labelBalance->setCursor(QCursor(Qt::IBeamCursor));
-        labelBalance->setText(QString::fromUtf8("0 SHKL"));
+        labelBalance->setText(QString::fromUtf8("0 BEL"));
         labelBalance->setTextInteractionFlags(Qt::LinksAccessibleByMouse|Qt::TextSelectableByKeyboard|Qt::TextSelectableByMouse);
 
         formLayout_2->setWidget(0, QFormLayout::FieldRole, labelBalance);
@@ -129,7 +131,7 @@ public:
         labelUnconfirmed->setObjectName(QString::fromUtf8("labelUnconfirmed"));
         labelUnconfirmed->setFont(font1);
         labelUnconfirmed->setCursor(QCursor(Qt::IBeamCursor));
-        labelUnconfirmed->setText(QString::fromUtf8("0 SHKL"));
+        labelUnconfirmed->setText(QString::fromUtf8("0 BEL"));
         labelUnconfirmed->setTextInteractionFlags(Qt::LinksAccessibleByMouse|Qt::TextSelectableByKeyboard|Qt::TextSelectableByMouse);
 
         formLayout_2->setWidget(1, QFormLayout::FieldRole, labelUnconfirmed);
@@ -167,6 +169,20 @@ public:
         verticalSpacer = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Expanding);
 
         verticalLayout_2->addItem(verticalSpacer);
+
+        label_wallet_bgcoin = new QLabel(OverviewPage);
+        label_wallet_bgcoin->setObjectName(QString::fromUtf8("label_wallet_bgcoin"));
+        label_wallet_bgcoin->setPixmap(QPixmap(QString::fromUtf8(":/images/wallet_bgcoin")));
+        label_wallet_bgcoin->setScaledContents(false);
+        label_wallet_bgcoin->setAlignment(Qt::AlignCenter);
+        label_wallet_bgcoin->setMargin(-2);
+
+        verticalLayout_2->addWidget(label_wallet_bgcoin);
+
+        label_6 = new QLabel(OverviewPage);
+        label_6->setObjectName(QString::fromUtf8("label_6"));
+
+        verticalLayout_2->addWidget(label_6);
 
 
         horizontalLayout->addLayout(verticalLayout_2);
@@ -252,9 +268,11 @@ public:
 #ifndef QT_NO_TOOLTIP
         labelImmature->setToolTip(QApplication::translate("OverviewPage", "Mined balance that has not yet matured", 0, QApplication::UnicodeUTF8));
 #endif // QT_NO_TOOLTIP
+        label_wallet_bgcoin->setText(QString());
+        label_6->setText(QString());
         label_4->setText(QApplication::translate("OverviewPage", "<b>Recent transactions</b>", 0, QApplication::UnicodeUTF8));
 #ifndef QT_NO_TOOLTIP
-        labelTransactionsStatus->setToolTip(QApplication::translate("OverviewPage", "The displayed information may be out of date. Your wallet automatically synchronizes with the CryptoShekel network after a connection is established, but this process has not completed yet.", 0, QApplication::UnicodeUTF8));
+        labelTransactionsStatus->setToolTip(QApplication::translate("OverviewPage", "The displayed information may be out of date. Your wallet automatically synchronizes with the DogeCoin network after a connection is established, but this process has not completed yet.", 0, QApplication::UnicodeUTF8));
 #endif // QT_NO_TOOLTIP
     } // retranslateUi
 
