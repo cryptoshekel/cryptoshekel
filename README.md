@@ -1,8 +1,10 @@
-<<<<<<< HEAD
 CryptoShekel (SHKL)
 ===========
 
-[![Build Status](https://travis-ci.org/RazorLove/cryptoshekel.png?branch=master)](https://travis-ci.org/RazorLove/cryptoshekel)
+For all the shills out there
+
+Stop wasting your time with all these other cryptoshekels and start focusing on the one true CryptoShekel
+
 
 
 Scrypt Hashcash PoW Template
