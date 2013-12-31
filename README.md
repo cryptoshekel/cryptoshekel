@@ -7,7 +7,7 @@ Stop wasting your time with all these other cryptoshekels and start focusing on 
 
 
 
-Scrypt Hashcash PoW Template
+
 =======
 cryptoshekel
 ============
